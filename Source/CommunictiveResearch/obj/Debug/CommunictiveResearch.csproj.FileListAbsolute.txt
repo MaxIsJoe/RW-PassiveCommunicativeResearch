@@ -1,0 +1,10 @@
+D:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\PassiveCommunicativeResearch\Source\CommunictiveResearch\obj\Debug\CommunictiveResearch.csproj.AssemblyReference.cache
+D:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\PassiveCommunicativeResearch\Source\CommunictiveResearch\obj\Debug\CommunictiveResearch.GeneratedMSBuildEditorConfig.editorconfig
+D:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\PassiveCommunicativeResearch\Source\CommunictiveResearch\obj\Debug\CommunictiveResearch.csproj.CoreCompileInputs.cache
+D:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\PassiveCommunicativeResearch\Assemblies\CommunictiveResearch.deps.json
+D:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\PassiveCommunicativeResearch\Assemblies\CommunictiveResearch.dll
+D:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\PassiveCommunicativeResearch\Assemblies\CommunictiveResearch.pdb
+D:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\PassiveCommunicativeResearch\Source\CommunictiveResearch\obj\Debug\CommunictiveResearch.dll
+D:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\PassiveCommunicativeResearch\Source\CommunictiveResearch\obj\Debug\refint\CommunictiveResearch.dll
+D:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\PassiveCommunicativeResearch\Source\CommunictiveResearch\obj\Debug\CommunictiveResearch.pdb
+D:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\PassiveCommunicativeResearch\Source\CommunictiveResearch\obj\Debug\ref\CommunictiveResearch.dll

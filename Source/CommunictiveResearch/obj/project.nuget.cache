@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "5BHyxUDozOY=",
+  "success": true,
+  "projectFilePath": "D:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\PassiveCommunicativeResearch\\Source\\CommunictiveResearch\\CommunictiveResearch.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Maximus\\.nuget\\packages\\lib.harmony\\2.4.2\\lib.harmony.2.4.2.nupkg.sha512"
+  ],
+  "logs": []
+}

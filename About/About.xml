@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>Passive Communicative Research</name>
+	<author>MaxIsJoe</author>
+	<packageId>maxisjoe.passivecommunicativeresearch</packageId>
+	<supportedVersions>
+		<li>1.7</li>
+	</supportedVersions>
+	<description>Pawns discuss and share their research progress, theories, and ideas with each other. Resulting in extra research progress being awarded, even when no one is at a bench!</description>
+	<modDependencies>
+		<li>
+			<packageId>brrainz.harmony</packageId>
+			<displayName>Harmony</displayName>
+			<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2009463077</steamWorkshopUrl>
+		</li>
+	</modDependencies>
+</ModMetaData>

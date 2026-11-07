@@ -1,5 +1,7 @@
 # Passive Communicative Research
 
+![image](https://raw.githubusercontent.com/MaxIsJoe/RW-PassiveCommunicativeResearch/refs/heads/main/About/Preview.png)
+
 A Rimworld mod that allows pawns to generate passive research points for projects while they're interacting with each other.
 
 ### Details

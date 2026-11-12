@@ -8,12 +8,14 @@ namespace CommunictiveResearch
         private const float DefaultMaximumPointsMultiplier = 2f;
         private const bool DefaultMultiplyAwardedPoints = true;
         private const bool DefaultDebugLogging = false;
+        private const bool DefaultPrerequisitesRequired = false;
         private const float MaximumPointsMultiplierLimit = 5f;
 
         public float TriggerChance = DefaultTriggerChance;
         public bool MultiplyAwardedPoints = DefaultMultiplyAwardedPoints;
         public float MaximumPointsMultiplier = DefaultMaximumPointsMultiplier;
         public bool DebugLogging = DefaultDebugLogging;
+        public bool PrerequisitesRequired = DefaultPrerequisitesRequired;
 
         public void Draw(UnityEngine.Rect inRect)
         {
@@ -23,6 +25,7 @@ namespace CommunictiveResearch
             TriggerChance = listing.Slider(TriggerChance, 0f, 1f);
             listing.CheckboxLabeled("Multiply awarded points", ref MultiplyAwardedPoints,
                 "Randomly multiplies the awarded points between 1x and the maximum multiplier.");
+            listing.CheckboxLabeled("Disallow projects with unfulfilled Prerequisites", ref PrerequisitesRequired, "Points will only be awarded for projects that can be researched at the moment.");
             listing.Label("Maximum points multiplier: " + MaximumPointsMultiplier.ToString("F1") + "x");
             MaximumPointsMultiplier = listing.Slider(MaximumPointsMultiplier, 1f, MaximumPointsMultiplierLimit);
             listing.CheckboxLabeled("Enable debug logging", ref DebugLogging, "Logs the mod's research trigger activity for debugging.");
@@ -35,6 +38,7 @@ namespace CommunictiveResearch
             Scribe_Values.Look(ref MultiplyAwardedPoints, "multiplyAwardedPoints", DefaultMultiplyAwardedPoints);
             Scribe_Values.Look(ref MaximumPointsMultiplier, "maximumPointsMultiplier", DefaultMaximumPointsMultiplier);
             Scribe_Values.Look(ref DebugLogging, "debugLogging", DefaultDebugLogging);
+            Scribe_Values.Look(ref PrerequisitesRequired, "prerequisitesRequired", DefaultPrerequisitesRequired);
             TriggerChance = TriggerChance < 0f ? 0f : TriggerChance > 1f ? 1f : TriggerChance;
             MaximumPointsMultiplier = MaximumPointsMultiplier < 1f
                 ? 1f

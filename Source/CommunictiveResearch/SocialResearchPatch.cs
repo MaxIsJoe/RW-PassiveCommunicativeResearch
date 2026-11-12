@@ -93,7 +93,7 @@ internal static class SocialResearchPatch
         }
 
         ResearchProjectDef currentProject = GetCurrentProject(researchManager, projects);
-        ResearchProjectDef projectToAdvance = SelectProject(projects, currentProject);
+        ResearchProjectDef projectToAdvance = SelectProject(projects, currentProject, settings);
         float previousProgress = researchManager.GetProgress(projectToAdvance);
         researchManager.AddProgress(projectToAdvance, researchPoints, ___pawn);
         float appliedProgress = researchManager.GetProgress(projectToAdvance) - previousProgress;
@@ -136,7 +136,7 @@ internal static class SocialResearchPatch
         return pawn.needs.mood.CurLevelPercentage;
     }
 
-    private static ResearchProjectDef SelectProject(List<ResearchProjectDef> projects, ResearchProjectDef currentProject)
+    private static ResearchProjectDef SelectProject(List<ResearchProjectDef> projects, ResearchProjectDef currentProject, CommunictiveResearchSettings settings)
     {
         if (currentProject != null && Rand.Chance(0.65f))
         {
@@ -146,12 +146,14 @@ internal static class SocialResearchPatch
         var totalWeight = 0f;
         foreach (ResearchProjectDef project in projects)
         {
+            if (project.PrerequisitesCompleted == false && settings.PrerequisitesRequired) continue;
             totalWeight += project == currentProject ? CurrentProjectWeight : 1f;
         }
 
         float selection = Rand.Range(0f, totalWeight);
         foreach (ResearchProjectDef project in projects)
         {
+            if (project.PrerequisitesCompleted == false && settings.PrerequisitesRequired) continue;
             selection -= project == currentProject ? CurrentProjectWeight : 1f;
             if (selection < 0f) return project;
         }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\PassiveCommunicativeResearch\\Source\\CommunictiveResearch\\CommunictiveResearch.csproj": {}
+    "D:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\RW-PassiveCommunicativeResearch\\Source\\CommunictiveResearch\\CommunictiveResearch.csproj": {}
   },
   "projects": {
-    "D:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\PassiveCommunicativeResearch\\Source\\CommunictiveResearch\\CommunictiveResearch.csproj": {
+    "D:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\RW-PassiveCommunicativeResearch\\Source\\CommunictiveResearch\\CommunictiveResearch.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\PassiveCommunicativeResearch\\Source\\CommunictiveResearch\\CommunictiveResearch.csproj",
+        "projectUniqueName": "D:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\RW-PassiveCommunicativeResearch\\Source\\CommunictiveResearch\\CommunictiveResearch.csproj",
         "projectName": "CommunictiveResearch",
-        "projectPath": "D:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\PassiveCommunicativeResearch\\Source\\CommunictiveResearch\\CommunictiveResearch.csproj",
+        "projectPath": "D:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\RW-PassiveCommunicativeResearch\\Source\\CommunictiveResearch\\CommunictiveResearch.csproj",
         "packagesPath": "C:\\Users\\Maximus\\.nuget\\packages\\",
-        "outputPath": "D:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\PassiveCommunicativeResearch\\Source\\CommunictiveResearch\\obj\\",
+        "outputPath": "D:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\RW-PassiveCommunicativeResearch\\Source\\CommunictiveResearch\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

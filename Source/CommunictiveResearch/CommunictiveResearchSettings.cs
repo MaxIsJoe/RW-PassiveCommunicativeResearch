@@ -9,6 +9,7 @@ namespace CommunictiveResearch
         private const bool DefaultMultiplyAwardedPoints = true;
         private const bool DefaultDebugLogging = false;
         private const bool DefaultPrerequisitesRequired = false;
+        private const bool DefaultNotifyWhenResearchProgresses = false;
         private const float MaximumPointsMultiplierLimit = 5f;
 
         public float TriggerChance = DefaultTriggerChance;
@@ -16,6 +17,7 @@ namespace CommunictiveResearch
         public float MaximumPointsMultiplier = DefaultMaximumPointsMultiplier;
         public bool DebugLogging = DefaultDebugLogging;
         public bool PrerequisitesRequired = DefaultPrerequisitesRequired;
+        public bool NotifyWhenResearchProgresses = DefaultNotifyWhenResearchProgresses;
 
         public void Draw(UnityEngine.Rect inRect)
         {
@@ -26,6 +28,7 @@ namespace CommunictiveResearch
             listing.CheckboxLabeled("Multiply awarded points", ref MultiplyAwardedPoints,
                 "Randomly multiplies the awarded points between 1x and the maximum multiplier.");
             listing.CheckboxLabeled("Disallow projects with unfulfilled Prerequisites", ref PrerequisitesRequired, "Points will only be awarded for projects that can be researched at the moment.");
+            listing.CheckboxLabeled("Notify when research progresses", ref NotifyWhenResearchProgresses, "Receive a message when rewards are awarded.");
             listing.Label("Maximum points multiplier: " + MaximumPointsMultiplier.ToString("F1") + "x");
             MaximumPointsMultiplier = listing.Slider(MaximumPointsMultiplier, 1f, MaximumPointsMultiplierLimit);
             listing.CheckboxLabeled("Enable debug logging", ref DebugLogging, "Logs the mod's research trigger activity for debugging.");
@@ -39,6 +42,7 @@ namespace CommunictiveResearch
             Scribe_Values.Look(ref MaximumPointsMultiplier, "maximumPointsMultiplier", DefaultMaximumPointsMultiplier);
             Scribe_Values.Look(ref DebugLogging, "debugLogging", DefaultDebugLogging);
             Scribe_Values.Look(ref PrerequisitesRequired, "prerequisitesRequired", DefaultPrerequisitesRequired);
+            Scribe_Values.Look(ref NotifyWhenResearchProgresses, "notifyWhenResearchProgresses", DefaultNotifyWhenResearchProgresses);
             TriggerChance = TriggerChance < 0f ? 0f : TriggerChance > 1f ? 1f : TriggerChance;
             MaximumPointsMultiplier = MaximumPointsMultiplier < 1f
                 ? 1f

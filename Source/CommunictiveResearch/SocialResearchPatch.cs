@@ -97,11 +97,19 @@ internal static class SocialResearchPatch
         float previousProgress = researchManager.GetProgress(projectToAdvance);
         researchManager.AddProgress(projectToAdvance, researchPoints, ___pawn);
         float appliedProgress = researchManager.GetProgress(projectToAdvance) - previousProgress;
+        Notify(appliedProgress, projectToAdvance, currentProject, ___pawn, recipient, researchPoints, settings);
+    }
+
+    private static void Notify(float appliedProgress, ResearchProjectDef projectToAdvance, ResearchProjectDef currentProject, Pawn ___pawn, Pawn recipient, float researchPoints, CommunictiveResearchSettings settings)
+    {
         LogDebug("Applied " + appliedProgress + " research points to " + projectToAdvance.label +
-                (currentProject == null
-                    ? " (no active project)."
-                    : " (active project weight: " +
-                    (projectToAdvance == currentProject ? CurrentProjectWeight : 1f) + ")."));
+                 (currentProject == null
+                     ? " (no active project)."
+                     : " (active project weight: " +
+                       (projectToAdvance == currentProject ? CurrentProjectWeight : 1f) + ")."));
+        if (researchPoints <= 0 || settings.NotifyWhenResearchProgresses == false) return;
+        var msg = $"{___pawn.NameShortColored} and {recipient.NameShortColored} had a discussion about {projectToAdvance.label}. ({(int)researchPoints})";
+        Messages.Message(msg, MessageTypeDefOf.PositiveEvent);
     }
 
     private static float GetResearchPoints(Pawn pawn)
